@@ -1,0 +1,16 @@
+PODS:
+  - JBDatePicker (0.1.0)
+
+DEPENDENCIES:
+  - JBDatePicker (from `../`)
+
+EXTERNAL SOURCES:
+  JBDatePicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JBDatePicker: 1723ce66d8d9a6bef4f084e861ff737b12983a03
+
+PODFILE CHECKSUM: 0243cbc720e7d7a3c3b45ff879cad3fd89b3d185
+
+COCOAPODS: 1.1.1
