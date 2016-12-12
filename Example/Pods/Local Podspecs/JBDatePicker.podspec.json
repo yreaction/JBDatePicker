@@ -1,9 +1,9 @@
 {
   "name": "JBDatePicker",
-  "version": "0.1.0",
-  "summary": "A short description of JBDatePicker.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/JBDatePicker",
+  "version": "1.0.0",
+  "summary": "A calendar field in which the user can select a date.",
+  "description": "JBDatePicker is a view which shows a month with all of its days. The user can select a date, which is returned as a Date object. It is possible to swipe between months, or manually select them. It is possible to load the datepicker with a specific date selected.",
+  "homepage": "https://github.com/Tuslareb/JBDatePicker",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "Joost": "joostvanbreukelen@me.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/JBDatePicker.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Tuslareb/JBDatePicker.git",
+    "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "JBDatePicker/Classes/**/*"
 }

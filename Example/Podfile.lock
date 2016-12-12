@@ -1,5 +1,5 @@
 PODS:
-  - JBDatePicker (0.1.0)
+  - JBDatePicker (1.0.0)
 
 DEPENDENCIES:
   - JBDatePicker (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  JBDatePicker: 1723ce66d8d9a6bef4f084e861ff737b12983a03
+  JBDatePicker: 92b69f4d028775e7a21a6462c2065385634b7e3b
 
 PODFILE CHECKSUM: 0243cbc720e7d7a3c3b45ff879cad3fd89b3d185
 
