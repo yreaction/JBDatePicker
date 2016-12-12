@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/JBDatePicker.svg?style=flat)](http://cocoapods.org/pods/JBDatePicker)
 [![Platform](https://img.shields.io/cocoapods/p/JBDatePicker.svg?style=flat)](http://cocoapods.org/pods/JBDatePicker)
 
+## Overview
+
+JBDatePicker is a subclass of UIView, written in Swift 3, that shows a calendarmonth in which the user can select a date. 
+
+![alt tag](https://cloud.githubusercontent.com/assets/6486085/21116844/8c9fd570-c0b7-11e6-8041-6206b540a26a.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
