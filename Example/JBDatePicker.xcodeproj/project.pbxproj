@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		87AED825FA6D30EF861CD1B0 /* Pods_JBDatePicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE825249E19F002E3FFD26D6 /* Pods_JBDatePicker_Example.framework */; };
 		C0E6E98DA831BFB80D116A44 /* Pods_JBDatePicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF0DAFF70F69EF4C0FEEA9D /* Pods_JBDatePicker_Tests.framework */; };
+		C84220261DFEDECE000A55AA /* CodedDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84220251DFEDECE000A55AA /* CodedDatePickerViewController.swift */; };
+		C842202A1DFEDEE5000A55AA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84220271DFEDEE5000A55AA /* DatePickerViewController.swift */; };
+		C842202B1DFEDEE5000A55AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84220281DFEDEE5000A55AA /* Main.storyboard */; };
+		C842202C1DFEDEE5000A55AA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84220291DFEDEE5000A55AA /* StartViewController.swift */; };
+		C84220301DFEDFF7000A55AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C842202F1DFEDFF7000A55AA /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,15 +36,17 @@
 		607FACD01AFB9204008FA782 /* JBDatePicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBDatePicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* JBDatePicker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBDatePicker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BE143CB0AB06FA1485757D50 /* Pods-JBDatePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JBDatePicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JBDatePicker_Example/Pods-JBDatePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C146797563A5ABD118C2FADA /* Pods-JBDatePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JBDatePicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JBDatePicker_Tests/Pods-JBDatePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C84220251DFEDECE000A55AA /* CodedDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodedDatePickerViewController.swift; sourceTree = "<group>"; };
+		C84220271DFEDEE5000A55AA /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		C84220281DFEDEE5000A55AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C84220291DFEDEE5000A55AA /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		C842202F1DFEDFF7000A55AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D7F213804E565E1F5C0C745A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D860806D7DA3C98311D9F2DC /* Pods-JBDatePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JBDatePicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JBDatePicker_Tests/Pods-JBDatePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE825249E19F002E3FFD26D6 /* Pods_JBDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JBDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,10 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				C84220251DFEDECE000A55AA /* CodedDatePickerViewController.swift */,
+				C84220271DFEDEE5000A55AA /* DatePickerViewController.swift */,
+				C84220281DFEDEE5000A55AA /* Main.storyboard */,
+				C84220291DFEDEE5000A55AA /* StartViewController.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				C842202F1DFEDFF7000A55AA /* Images.xcassets */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for JBDatePicker";
@@ -248,9 +254,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				C84220301DFEDFF7000A55AA /* Images.xcassets in Resources */,
+				C842202B1DFEDEE5000A55AA /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				C84220261DFEDECE000A55AA /* CodedDatePickerViewController.swift in Sources */,
+				C842202C1DFEDEE5000A55AA /* StartViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C842202A1DFEDEE5000A55AA /* DatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

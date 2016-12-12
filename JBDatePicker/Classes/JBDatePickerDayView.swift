@@ -16,7 +16,7 @@ public final class JBDatePickerDayView: UIView {
     weak private var weekView: JBDatePickerWeekView!
     weak private var monthView: JBDatePickerMonthView!
     weak var datePickerView: JBDatePickerView!
-    var date: Date?
+    public var date: Date?
 
     var isToday: Bool {
         return date == Date().stripped()
