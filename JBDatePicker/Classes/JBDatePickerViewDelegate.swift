@@ -28,7 +28,7 @@ public protocol JBDatePickerViewDelegate: class {
     
     
     /**
-     Sets the day that determines which month is shown on inital load
+     Sets the day that determines which month is shown on initial load
      - note:
      Implementing this variable is optional. It's default is set the current date.
      */
@@ -36,9 +36,9 @@ public protocol JBDatePickerViewDelegate: class {
  
     
     /**
-     Sets the first day of the week. Return nil if you want to use the default for the current calendar 
+     Sets the first day of the week. 
      - note:
-     Implementing this variable is optional. It's default is set to monday
+     Implementing this variable is optional. It's default is set to the locale.
      */
     var firstWeekDay: JBWeekDay {get}
     

@@ -43,6 +43,8 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
         datePicker.updateLayout()
     }
     
@@ -55,7 +57,7 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
     }
     
     func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {
-       monthLabel.text = datePicker.presentedMonthView.monthDescription
+       monthLabel.text = monthView.monthDescription 
         
     }
     
