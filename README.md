@@ -25,6 +25,10 @@ JBDatePicker is a subclass of UIView, written in Swift 3, that shows a calendarm
 
 Screenshots
 ==========
+<p align="center">
+<img src ="https://cloud.githubusercontent.com/assets/6486085/21157179/c8a66c20-c178-11e6-8a0d-de5403f7f9dd.png" />
+<img src ="https://cloud.githubusercontent.com/assets/6486085/21157183/ccf562c2-c178-11e6-8872-d87e0894e39c.png" />
+</p>
 
 GIF Demo
 ==========
@@ -55,7 +59,7 @@ JBDatePicker can be implemented in your project in two ways:
 + *Your viewController needs to adopt the JBDatePickerDelegate protocol.*
 + *Your viewController has to override the ‘viewDidLayoutSubviews’ method in which you need to call ‘updateLayout()’ on the JBDatePicker object.*
 
-Besides that, you need to integrate **JBDatePicker** with your project through **CocoaPods**. If you don’t know how to do this, please follow this tutorial. Alternatively you can drag the JBDatePicker development classes into your project manually. 
+Besides that, you need to integrate **JBDatePicker** with your project through **CocoaPods**. If you don’t know how to do this, please follow [this tutorial](https://guides.cocoapods.org/using/getting-started.html "CocoaPods Guides - Getting Started"). Alternatively you can drag the JBDatePicker classes into your project manually. 
 
 ###Storyboard setup
 
@@ -130,7 +134,7 @@ print("date selected: \(dayView.date)")
 
 ###Delegate functionality
 
-Besides the only required method, the delegate offers several optional methods to implement:
+Besides the only required method, the delegate offers several optional methods and properties to implement:
 
 ```swift
 /**
@@ -147,7 +151,7 @@ var dateToShow: Date { return a Date object}
 
 ###Appearance customization
 
-It is possible to customize the appearance of several parts of JBDatePicker by implementing the following optional methods:
+It is possible to customize the appearance of several parts of JBDatePicker by implementing the following optional properties:
 
 ```swift
 ///Sets the first day of the week. Defaults to the local preference.
