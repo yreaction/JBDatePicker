@@ -47,7 +47,7 @@ Installation
 <h3> CocoaPods </h3>
 
 ```ruby
-pod "JBDatePicker"
+pod 'JBDatePicker'
 ```
 Usage
 ==========
