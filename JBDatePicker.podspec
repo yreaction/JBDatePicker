@@ -24,7 +24,7 @@ JBDatePicker is a view which shows a month with all of its days. The user can se
   s.homepage         = 'https://github.com/Tuslareb/JBDatePicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Joost' => 'joostvanbreukelen@me.com' }
+  s.author           = { 'Tuslareb' => 'tuslareb@yahoo.com' }
   s.source           = { :git => 'https://github.com/Tuslareb/JBDatePicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/strafpleiter'
 
