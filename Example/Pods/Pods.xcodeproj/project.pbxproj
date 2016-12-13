@@ -48,7 +48,7 @@
 		2EB619074B4107E9BCD18C6C162B5E1A /* JBDatePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JBDatePicker-umbrella.h"; sourceTree = "<group>"; };
 		400FCEBF9E01F2A78F537A7836326DCB /* JBDatePickerMonthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDatePickerMonthView.swift; sourceTree = "<group>"; };
 		43EDC559228E604AF4ABB6769F3EA2C0 /* Pods-JBDatePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JBDatePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		51AD9D1E4F23396067A784751B505023 /* Pods_JBDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JBDatePicker_Tests.framework; path = "Pods-JBDatePicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51AD9D1E4F23396067A784751B505023 /* Pods_JBDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JBDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5397074041FADF2A313F692609754154 /* Pods-JBDatePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JBDatePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		59A0D8C424A9BDF0C89560D96FD57BDC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CBAAFDE9341BA838C4A77005DA238F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,24 +63,24 @@
 		819F752E01973CA12560B534313A6AF0 /* Pods-JBDatePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JBDatePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		828B30146E04550E7A9A2AD55DFBEFEC /* JBDatePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JBDatePicker.xcconfig; sourceTree = "<group>"; };
 		887E8E866EDF0E98E18C3DAF152EEAF1 /* Pods-JBDatePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JBDatePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AC517164451E714BD92FDD3B2B740A0 /* Pods-JBDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JBDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
-		9BFA65D69DBF26A1C558C223C31A0F91 /* JBDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JBDatePicker.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AC517164451E714BD92FDD3B2B740A0 /* Pods-JBDatePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JBDatePicker_Tests.modulemap"; sourceTree = "<group>"; };
+		9BFA65D69DBF26A1C558C223C31A0F91 /* JBDatePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JBDatePicker.modulemap; sourceTree = "<group>"; };
 		9CB18C1CBCB8BE642635AAC47D109A69 /* JBDatePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JBDatePicker-prefix.pch"; sourceTree = "<group>"; };
 		AB1CBEAF72DF087212AAA82C65F48E67 /* JBDatePickerDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDatePickerDayView.swift; sourceTree = "<group>"; };
 		AB559CDF7011DD662E153FCD1CC62321 /* Pods-JBDatePicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JBDatePicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AC2800553A59A1C04E6B73891449A7CE /* Pods-JBDatePicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JBDatePicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B80818C13651E75A96C55F3FFABA20C3 /* Pods-JBDatePicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JBDatePicker_Example-frameworks.sh"; sourceTree = "<group>"; };
-		BF892B6B9F5A556C8B57F2F4C108CD99 /* Pods-JBDatePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JBDatePicker_Example.modulemap"; sourceTree = "<group>"; };
+		BF892B6B9F5A556C8B57F2F4C108CD99 /* Pods-JBDatePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JBDatePicker_Example.modulemap"; sourceTree = "<group>"; };
 		C109D216BE105097F749F98A1EE9E929 /* JBDatePickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDatePickerView.swift; sourceTree = "<group>"; };
-		C4003370938F459CD47E804D8DC42920 /* Pods_JBDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JBDatePicker_Example.framework; path = "Pods-JBDatePicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4003370938F459CD47E804D8DC42920 /* Pods_JBDatePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JBDatePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E76DF5B381BA3F447ABA6F696FD00A /* JBDateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDateExtension.swift; sourceTree = "<group>"; };
 		C9CEE6AE88233F4D568F75A98E945C43 /* Pods-JBDatePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JBDatePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD44E8FDE0F300E58876B7A2CA7FA362 /* Pods-JBDatePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JBDatePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DCE2E96CCA26BB140BDF9E7950BEB6D1 /* JBDatePickerEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDatePickerEnums.swift; sourceTree = "<group>"; };
 		E49DBBA5261C895C04793ED5BF189AF2 /* JBDatePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JBDatePicker-dummy.m"; sourceTree = "<group>"; };
-		F9E2265C2D02A21EB150BD5D6A46E595 /* JBDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JBDatePicker.framework; path = JBDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E2265C2D02A21EB150BD5D6A46E595 /* JBDatePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBDatePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF003E09EA91DB506AEFD40CD8129F39 /* Pods-JBDatePicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JBDatePicker_Tests-dummy.m"; sourceTree = "<group>"; };
 		FF09E1506345F4AF1CB07E0791AAD91D /* JBDatePickerContentVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDatePickerContentVC.swift; sourceTree = "<group>"; };
 		FF205CB739E2B9CA00B07380363CA25B /* JBDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JBDate.swift; sourceTree = "<group>"; };
@@ -126,20 +126,10 @@
 		21E656536C93C53FD4D428BAF0535097 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FF205CB739E2B9CA00B07380363CA25B /* JBDate.swift */,
-				C8E76DF5B381BA3F447ABA6F696FD00A /* JBDateExtension.swift */,
-				FF09E1506345F4AF1CB07E0791AAD91D /* JBDatePickerContentVC.swift */,
-				AB1CBEAF72DF087212AAA82C65F48E67 /* JBDatePickerDayView.swift */,
-				DCE2E96CCA26BB140BDF9E7950BEB6D1 /* JBDatePickerEnums.swift */,
-				64ADF36569A5A01D06C77887E28C4838 /* JBDatePickerManager.swift */,
-				400FCEBF9E01F2A78F537A7836326DCB /* JBDatePickerMonthView.swift */,
-				6FCC7C8817573BFD0E55637CA419DA6D /* JBDatePickerSelectionView.swift */,
-				C109D216BE105097F749F98A1EE9E929 /* JBDatePickerView.swift */,
-				264EB40A66B83A0F62732B741C76A405 /* JBDatePickerViewDelegate.swift */,
-				75537F87FF60BECDB0DE8A0E5CF2885A /* JBDatePickerWeekDaysView.swift */,
-				6B4E6C9170A47CCB396157B8E549CBAA /* JBDatePickerWeekView.swift */,
+				C865E7681DFFC98500BDA75D /* Other stuff */,
+				C865E7671DFFC97300BDA75D /* Manager, Controller & Delegate */,
+				C865E7661DFFC94D00BDA75D /* Views */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -176,7 +166,6 @@
 			children = (
 				21E656536C93C53FD4D428BAF0535097 /* Classes */,
 			);
-			name = JBDatePicker;
 			path = JBDatePicker;
 			sourceTree = "<group>";
 		};
@@ -255,6 +244,39 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C865E7661DFFC94D00BDA75D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C109D216BE105097F749F98A1EE9E929 /* JBDatePickerView.swift */,
+				AB1CBEAF72DF087212AAA82C65F48E67 /* JBDatePickerDayView.swift */,
+				400FCEBF9E01F2A78F537A7836326DCB /* JBDatePickerMonthView.swift */,
+				6FCC7C8817573BFD0E55637CA419DA6D /* JBDatePickerSelectionView.swift */,
+				75537F87FF60BECDB0DE8A0E5CF2885A /* JBDatePickerWeekDaysView.swift */,
+				6B4E6C9170A47CCB396157B8E549CBAA /* JBDatePickerWeekView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C865E7671DFFC97300BDA75D /* Manager, Controller & Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FF09E1506345F4AF1CB07E0791AAD91D /* JBDatePickerContentVC.swift */,
+				64ADF36569A5A01D06C77887E28C4838 /* JBDatePickerManager.swift */,
+				264EB40A66B83A0F62732B741C76A405 /* JBDatePickerViewDelegate.swift */,
+			);
+			name = "Manager, Controller & Delegate";
+			sourceTree = "<group>";
+		};
+		C865E7681DFFC98500BDA75D /* Other stuff */ = {
+			isa = PBXGroup;
+			children = (
+				FF205CB739E2B9CA00B07380363CA25B /* JBDate.swift */,
+				C8E76DF5B381BA3F447ABA6F696FD00A /* JBDateExtension.swift */,
+				DCE2E96CCA26BB140BDF9E7950BEB6D1 /* JBDatePickerEnums.swift */,
+			);
+			name = "Other stuff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
