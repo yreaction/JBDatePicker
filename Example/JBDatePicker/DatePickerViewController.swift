@@ -17,10 +17,6 @@ class DatePickerViewController: UIViewController, JBDatePickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Optionally, set up appearance. Do this before setting the delegate! Otherwise it will use the default color
-        //TODO: make a refresh method on setting the color in datePickerView
-        //datePickerView.colorForDayLabelInMonth = .orange
 
         // Do any additional setup after loading the view, typically from a nib.
         datePickerView.delegate = self
