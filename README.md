@@ -26,14 +26,13 @@ JBDatePicker is a subclass of UIView, written in Swift 3, that shows a calendarm
 Screenshots
 ==========
 <p align="center">
-<img src ="https://cloud.githubusercontent.com/assets/6486085/21157179/c8a66c20-c178-11e6-8a0d-de5403f7f9dd.png" />
-<img src ="https://cloud.githubusercontent.com/assets/6486085/21157183/ccf562c2-c178-11e6-8872-d87e0894e39c.png" />
+<img src ="https://cloud.githubusercontent.com/assets/6486085/21187845/b2a4a15c-c219-11e6-986b-200610913bbc.png" />
 </p>
 
 GIF Demo
 ==========
 <p align="center">
-<img src ="https://cloud.githubusercontent.com/assets/6486085/21116844/8c9fd570-c0b7-11e6-8041-6206b540a26a.gif" />
+<img src ="https://cloud.githubusercontent.com/assets/6486085/21189208/3b99353c-c21e-11e6-9f39-b8901f848bd7.gif" />
 </p>
 
 Requirements
@@ -170,7 +169,7 @@ var colorForDayLabelInMonth: UIColor { return UIColor of choice }
 var colorForDayLabelOutOfMonth: UIColor { return UIColor of choice }
 
 ///color of the 'today' date label text
-var colorForCurrentDay: UIColor { return //UIColor of choice }
+var colorForCurrentDay: UIColor { return UIColor of choice }
 
 ///color of any label text that is selected
 var colorForSelelectedDayLabel: UIColor { return UIColor of choice }
