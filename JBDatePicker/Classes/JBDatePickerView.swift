@@ -117,6 +117,12 @@ extension JBDatePickerView {
 
         let monthFormatString = "MMMM yyyy"
         dateFormatter.dateFormat = monthFormatString
+        if let preferredLanguage = Bundle.main.preferredLocalizations.first {
+            if delegate?.shouldLocalize == true {
+                dateFormatter.locale = Locale(identifier: preferredLanguage)
+            }
+        }
+
         return dateFormatter.string(from: date)
     }
     

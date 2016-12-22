@@ -159,6 +159,10 @@ var firstWeekDay: JBWeekDay { return .wednesday }
 ///Determines if a month should also show the dates of the previous and next month. Defaults to true.
 var shouldShowMonthOutDates: Bool { return false }
 
+
+///Determines if the weekday symbols and the month description should follow available localizations. Defaults to false. This means that the weekday symbols and the month description will be in the same language as the device language. If you want it to conform to the localization of your app, return true here. If you return true and your app is not localized, the weekday symbols and the month description will be in the development language.
+var shouldLocalize: Bool { return true }
+
 ///Determines the height ratio of the weekDaysView compared to the total height. Defaults to 0.1 (10%).
 var weekDaysViewHeightRatio: CGFloat { return 0.2 }
 

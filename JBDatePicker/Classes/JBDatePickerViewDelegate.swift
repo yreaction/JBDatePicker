@@ -51,6 +51,16 @@ public protocol JBDatePickerViewDelegate: class {
     var shouldShowMonthOutDates: Bool {get}
     
     /**
+     Determines if the weekday symbols and the month description should follow available localizations
+     - note:
+     Implementing this variable is optional. It's default is set to false. This means that the weekday symbols
+     and the month description will be in the same language as the device language. If you want it to conform to the
+     localization of your app, return true here. If you return true and your app is not localized, the weekday symbols and 
+     the month description will be in the development language.
+     */
+    var shouldLocalize: Bool {get}
+    
+    /**
      Determines the height ratio of the weekDaysView compared to the total height
      
      - note:
@@ -119,6 +129,7 @@ public extension JBDatePickerViewDelegate {
     }
     
    public var shouldShowMonthOutDates: Bool { return true }
+   public var shouldLocalize: Bool { return false }
    public var weekDaysViewHeightRatio: CGFloat { return 0.1 }
     
     // MARK: - Color defaults

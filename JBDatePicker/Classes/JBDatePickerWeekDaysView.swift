@@ -52,7 +52,13 @@ public final class JBDatePickerWeekDaysView: UIStackView {
         self.weekdayLabelTextColor = datePickerView.delegate?.colorForWeekDaysViewText
         
         //get weekday name symbols
-        weekdayNameSymbols = Calendar.current.shortWeekdaySymbols
+        var cal = Calendar.current
+        if let preferredLanguage = Bundle.main.preferredLocalizations.first {
+            if datePickerView.delegate?.shouldLocalize == true {
+                cal.locale = Locale(identifier: preferredLanguage)
+            }
+        }
+        weekdayNameSymbols = cal.shortWeekdaySymbols
         
         //adjust order of weekDayNameSymbols if needed
         let firstWeekdayIndex = firstWeekDay.rawValue - 1
