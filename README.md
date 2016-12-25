@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/JBDatePicker.svg?style=flat)](http://cocoapods.org/pods/JBDatePicker)
 [![License](https://img.shields.io/cocoapods/l/JBDatePicker.svg?style=flat)](http://cocoapods.org/pods/JBDatePicker)
 [![Platform](https://img.shields.io/cocoapods/p/JBDatePicker.svg?style=flat)](http://cocoapods.org/pods/JBDatePicker)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 
 Overview
@@ -48,6 +49,11 @@ Installation
 ```ruby
 pod 'JBDatePicker'
 ```
+<h3> Carthage </h3>
+
+```ruby
+github "Tuslareb/JBDatePicker"
+```
 Usage
 ==========
 JBDatePicker can be implemented in your project in two ways:
@@ -58,7 +64,7 @@ JBDatePicker can be implemented in your project in two ways:
 + *Your viewController needs to adopt the JBDatePickerDelegate protocol.*
 + *Your viewController has to override the ‘viewDidLayoutSubviews’ method in which you need to call ‘updateLayout()’ on the JBDatePicker object.*
 
-Besides that, you need to integrate **JBDatePicker** with your project through **CocoaPods**. If you don’t know how to do this, please follow [this tutorial](https://guides.cocoapods.org/using/getting-started.html "CocoaPods Guides - Getting Started"). Alternatively you can drag the JBDatePicker classes into your project manually. 
+Besides that, you need to integrate **JBDatePicker** with your project through **CocoaPods**. If you don’t know how to do this, please follow [this tutorial](https://guides.cocoapods.org/using/getting-started.html "CocoaPods Guides - Getting Started"). Alternatively you can use Carthage or drag the JBDatePicker classes into your project manually. 
 
 ###Storyboard setup
 
