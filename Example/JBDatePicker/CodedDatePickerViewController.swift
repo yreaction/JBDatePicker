@@ -79,13 +79,19 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
         return UIColor(red: 191.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1.0)
     }
     
-    
+    //only show the dates of the current month
     var shouldShowMonthOutDates: Bool {
         return false
     }
     
+    //custom weekdays view height
     var weekDaysViewHeightRatio: CGFloat {
         return 0.15
+    }
+    
+    //custom selection shape
+    var selectionShape: JBSelectionShape {
+        return .roundedRect
     }
     
 

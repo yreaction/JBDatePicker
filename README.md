@@ -174,6 +174,9 @@ var shouldLocalize: Bool { return true }
 ///Determines the height ratio of the weekDaysView compared to the total height. Defaults to 0.1 (10%).
 var weekDaysViewHeightRatio: CGFloat { return 0.2 }
 
+///Determines the shape that is used to indicate a selected date. Defaults to a circular shape. 
+var selectionShape: JBSelectionShape { return .roundedRect }
+
 ///color of any date label text that falls within the presented month
 var colorForDayLabelInMonth: UIColor { return UIColor of choice }
 

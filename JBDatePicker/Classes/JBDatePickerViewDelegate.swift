@@ -46,7 +46,7 @@ public protocol JBDatePickerViewDelegate: class {
     /**
      Determines if a month should also show the dates of the previous and next month
      - note:
-     Implementing this variable is optional. It's default is set to true
+     Implementing this variable is optional. It's default is set to true.
      */
     var shouldShowMonthOutDates: Bool {get}
     
@@ -60,14 +60,27 @@ public protocol JBDatePickerViewDelegate: class {
      */
     var shouldLocalize: Bool {get}
     
+    
+    // MARK: - General appearance properties
+    
     /**
      Determines the height ratio of the weekDaysView compared to the total height
      
      - note:
-     Implementing this variable is optional. It's default is set to 0.1 (10%)
+     Implementing this variable is optional. It's default is set to 0.1 (10%).
      
      */
     var weekDaysViewHeightRatio: CGFloat {get}
+    
+    /**
+     Determines the shape that is used to indicate a selected date. Possiblilities are:
+     .circle, .square, .roundedRect
+     
+     - note: 
+     Implementing this variable is optional. It's default is set to .circle.
+     
+     */
+    var selectionShape: JBSelectionShape { get }
     
     
     // MARK: - Text Color appearance properties
@@ -128,9 +141,10 @@ public extension JBDatePickerViewDelegate {
         }
     }
     
-   public var shouldShowMonthOutDates: Bool { return true }
-   public var shouldLocalize: Bool { return false }
-   public var weekDaysViewHeightRatio: CGFloat { return 0.1 }
+    public var shouldShowMonthOutDates: Bool { return true }
+    public var shouldLocalize: Bool { return false }
+    public var weekDaysViewHeightRatio: CGFloat { return 0.1 }
+    public var selectionShape: JBSelectionShape { return .circle }
     
     // MARK: - Color defaults
     
