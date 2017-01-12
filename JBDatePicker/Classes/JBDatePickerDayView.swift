@@ -190,25 +190,20 @@ public final class JBDatePickerDayView: UIView {
     
     func select() {
 
-        if let selectionView = selectionView {
-            insertSubview(selectionView, at: 0)
-        }
-        else {
-            let selView = JBDatePickerSelectionView(dayView: self, frame: self.bounds, isSemiSelected: false)
-            insertSubview(selView, at: 0)
-            
-            selView.translatesAutoresizingMaskIntoConstraints = false
-            
-            //pin selectionView horizontally and make it's width equal to the height of the datePickerview. This way it stays centered while rotating the device.
-            selView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-            selView.widthAnchor.constraint(equalTo: heightAnchor).isActive = true
-            
-            //pint it to the left and right
-            selView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-            selView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-            
-            selectionView = selView
-        }
+        let selView = JBDatePickerSelectionView(dayView: self, frame: self.bounds, isSemiSelected: false)
+        insertSubview(selView, at: 0)
+
+        selView.translatesAutoresizingMaskIntoConstraints = false
+        
+        //pin selectionView horizontally and make it's width equal to the height of the datePickerview. This way it stays centered while rotating the device.
+        selView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        selView.widthAnchor.constraint(equalTo: heightAnchor).isActive = true
+        
+        //pint it to the left and right
+        selView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        selView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        selectionView = selView
         
         //set textcolor to selected state
         textLabel.textColor = datePickerView.delegate?.colorForSelelectedDayLabel
