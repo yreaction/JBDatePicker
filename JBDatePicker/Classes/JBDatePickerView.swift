@@ -46,6 +46,7 @@ public final class JBDatePickerView: UIView {
         
         didSet {
             selectedDateView.select()
+            dateToPresent = selectedDateView.date
         }
     }
     
