@@ -42,12 +42,6 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        datePicker.updateLayout()
-    }
-    
     
     // MARK: - JBDatePickerViewDelegate
     

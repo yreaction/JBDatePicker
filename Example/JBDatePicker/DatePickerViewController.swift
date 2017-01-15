@@ -43,12 +43,6 @@ class DatePickerViewController: UIViewController, JBDatePickerViewDelegate {
         UIApplication.shared.statusBarStyle = .default
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        datePickerView.updateLayout()
- 
-    }
     
     // MARK: - JBDatePickerViewDelegate
     

@@ -102,12 +102,19 @@ extension JBDatePickerView {
             return
         }
         
+        guard weekdaysView != nil else { return }
+        
         let width = bounds.size.width
         let availableRectForScrollView = CGRect(x: bounds.origin.x, y: weekdaysView.bounds.height, width: width, height: bounds.size.height - weekdaysView.bounds.height)
 
         //adjust scrollView frame to available space
         contentController.updateScrollViewFrame(availableRectForScrollView)
-        
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        updateLayout()
     }
 }
 
