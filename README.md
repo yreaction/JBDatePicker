@@ -60,9 +60,8 @@ JBDatePicker can be implemented in your project in two ways:
 * Storyboard setup
 * Manual setup
 
-**Important**: whatever setup you choose, JBDatePicker needs two things to work correctly:
+**Important**: whatever setup you choose, JBDatePicker needs one thing to work correctly:
 + *Your viewController needs to adopt the JBDatePickerDelegate protocol.*
-+ *Your viewController has to override the ‘viewDidLayoutSubviews’ method in which you need to call ‘updateLayout()’ on the JBDatePicker object.*
 
 Besides that, you need to integrate **JBDatePicker** with your project through **CocoaPods**. If you don’t know how to do this, please follow [this tutorial](https://guides.cocoapods.org/using/getting-started.html "CocoaPods Guides - Getting Started"). Alternatively you can use Carthage or drag the JBDatePicker classes into your project manually. 
 
@@ -94,16 +93,6 @@ print("date selected: \(dayView.date)")
 }
 ```
 
-Finally, implement the viewDidLayoutSubviews method and call the updateLayout() method:
-
-```swift
-override func viewDidLayoutSubviews() {
-super.viewDidLayoutSubviews()
-
-datePicker.updateLayout()
-}
-```
-
 Running the app should show JBDatePicker and tapping a date should print a statement in the console. If not, double check that you’ve set the delegate and that you called the updateLayout method. If you want to customize the looks of JBDatePicker, keep reading. 
 
 ###Manual setup
@@ -124,11 +113,6 @@ view.addSubview(datePicker)
 datePicker.delegate = self  
 }
 
-override func viewDidLayoutSubviews() {
-super.viewDidLayoutSubviews()
-
-datePicker.updateLayout()
-}
 
 // MARK: - JBDatePickerViewDelegate
 
