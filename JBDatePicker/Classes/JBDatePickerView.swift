@@ -91,8 +91,7 @@ public final class JBDatePickerView: UIView {
 extension JBDatePickerView {
     
     /**
-     Updates the layout of JBDatePicker. This method must be called within the 'viewDidLayoutSubviews()' method of your viewController in
-     which you use JBDatePicker. This makes sure that elements in JBDatePicker that need a frame, will get their frame.
+     Updates the layout of JBDatePicker. This makes sure that elements in JBDatePicker that need a frame, will get their frame.
      */
     public func updateLayout() {
         
