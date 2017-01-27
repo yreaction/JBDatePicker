@@ -149,7 +149,7 @@ public final class JBDatePickerDayView: UIView {
             semiSelect(animated: true)
         case .ended:
             if let selView = selectionView {
-                selView.fullFillSelection()
+                selView.removeFromSuperview()
             }
             datePickerView.didTapDayView(dayView: self)
         

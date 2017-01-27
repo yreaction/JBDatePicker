@@ -75,7 +75,7 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
     
     //only show the dates of the current month
     var shouldShowMonthOutDates: Bool {
-        return true
+        return false 
     }
     
     //custom weekdays view height

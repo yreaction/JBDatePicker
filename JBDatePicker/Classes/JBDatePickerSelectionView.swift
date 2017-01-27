@@ -117,16 +117,6 @@ class JBDatePickerSelectionView: UIView {
         shapeLayer().path = selectionPath
     }
     
-    
-    ///This method will change the selection circle fill color from the semi selected color to the correct selected color
-    func fullFillSelection() {
-        
-        //this value will decide what color to draw with 
-        isSemiSelected = false
-        
-        //force redraw
-        self.setNeedsDisplay()
-    }
-    
+
 
 }
