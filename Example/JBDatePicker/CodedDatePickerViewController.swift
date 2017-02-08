@@ -60,6 +60,12 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
         return .wednesday
     }
     
+    //custom font
+    var fontForWeekDaysViewText: JBFont {
+
+        return JBFont(name: "AvenirNext-MediumItalic", size: .medium)
+    }
+    
     //custom colors
     var colorForWeekDaysViewBackground: UIColor {
         return UIColor(red: 209.0/255.0, green: 218.0/255.0, blue: 175.0/255.0, alpha: 1.0)

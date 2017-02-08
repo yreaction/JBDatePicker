@@ -106,6 +106,9 @@ public protocol JBDatePickerViewDelegate: class {
     ///color of the labels in the WeekdaysView bar that say 'mon' to 'sun'. Defaults to white.
     var colorForWeekDaysViewText: UIColor { get }
     
+    ///font of the labels in the WeekdaysView bar that say 'mon' to 'sun'. Defaults to systemfont.
+    var fontForWeekDaysViewText: JBFont { get }
+    
     
     // MARK: - Selection Color appearance properties
     
@@ -154,6 +157,7 @@ public extension JBDatePickerViewDelegate {
     public var colorForSelelectedDayLabel: UIColor { return .white }
     public var colorForWeekDaysViewBackground: UIColor { return  UIColor(red: 81.0/255.0, green: 182.0/255.0, blue: 185.0/255.0, alpha: 1.0) }
     public var colorForWeekDaysViewText: UIColor { return .white }
+    public var fontForWeekDaysViewText: JBFont { return JBFont() }
     public var colorForSelectionCircleForOtherDate: UIColor { return  UIColor(red: 81.0/255.0, green: 182.0/255.0, blue: 185.0/255.0, alpha: 1.0) }
     public var colorForSelectionCircleForToday: UIColor { return UIColor(red: 255.0/255.0, green: 98.0/255.0, blue: 89.0/255.0, alpha: 1.0) }
     public var colorForSemiSelectedSelectionCircle: UIColor { return UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0) }

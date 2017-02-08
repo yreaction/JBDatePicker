@@ -117,15 +117,19 @@ public final class JBDatePickerDayView: UIView {
 
     }
     
+    private func setupLabelFont() {
+     
+        //calculate size of font
+        let sizeOfFont = (min(frame.size.width, frame.size.height) / 2) - 4
+        
+        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName:UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)])
+        
+    }
+    
     public override func layoutSubviews() {
         
         textLabel.frame = bounds
-
-        //calculate size of font
-        let sizeOfFont = (min(frame.size.width, frame.size.height) / 2) - 4
-
-        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName:UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)])
-
+        setupLabelFont()
     }
     
     
@@ -173,8 +177,7 @@ public final class JBDatePickerDayView: UIView {
     
     public func reloadContent() {
         textLabel.frame = bounds
-        let sizeOfFont = (min(frame.size.width, frame.size.height) / 2) - 4
-        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName:UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)])
+        setupLabelFont()
         
         //reload selectionView
         if let selView = selectionView {
