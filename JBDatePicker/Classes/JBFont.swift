@@ -13,7 +13,7 @@ public final class JBFont: NSObject {
     var fontName: String
     var fontSize: JBFontSize
     
-    public init(name name: String = "", size: JBFontSize = .medium) {
+    public init(name: String = "", size: JBFontSize = .medium) {
         
         self.fontName = name
         self.fontSize = size
