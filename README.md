@@ -117,7 +117,7 @@ datePicker.delegate = self
 // MARK: - JBDatePickerViewDelegate
 
 func didSelectDay(_ dayView: JBDatePickerDayView) {
-print("date selected: \(dayView.date)")
+    print("date selected: \(dayView.date)")
 }
 ```
 
@@ -131,7 +131,7 @@ Is called when the user swiped (or manually moved) to another month
 - parameter monthView: the monthView that is now 'on screen'
 */
 func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {
-print(“month selected: \(monthView.monthDescription)”)
+    print(“month selected: \(monthView.monthDescription)”)
 }
 
 ///Sets the day that determines which month is shown on initial load. Defaults to the current date.
