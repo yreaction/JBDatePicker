@@ -77,9 +77,9 @@ Next, make sure you adopt the ‘JBDatePickerViewDelegate’ protocol and set yo
 
 ```swift
 override func viewDidLoad() {
-super.viewDidLoad()
+    super.viewDidLoad()
 
-datePicker.delegate = self
+    datePicker.delegate = self
 }
 ```
 
@@ -89,7 +89,7 @@ Adopting the JBDatePickerViewDelegate protocol requires the implementation of a 
 // MARK: - JBDatePickerViewDelegate implementation
 
 func didSelectDay(_ dayView: JBDatePickerDayView) {
-print("date selected: \(dayView.date)")
+    print("date selected: \(dayView.date)")
 }
 ```
 
@@ -105,12 +105,12 @@ class ViewController: UIViewController, JBDatePickerViewDelegate {
 var datePicker: JBDatePickerView!
 
 override func viewDidLoad() {
-super.viewDidLoad()
+    super.viewDidLoad()
 
-let frameForDatePicker = CGRect(x: 0, y: 20, width: view.bounds.width, height: 250)
-datePicker = JBDatePickerView(frame: frameForDatePicker)
-view.addSubview(datePicker)
-datePicker.delegate = self  
+    let frameForDatePicker = CGRect(x: 0, y: 20, width: view.bounds.width, height: 250)
+    datePicker = JBDatePickerView(frame: frameForDatePicker)
+    view.addSubview(datePicker)
+    datePicker.delegate = self  
 }
 
 
