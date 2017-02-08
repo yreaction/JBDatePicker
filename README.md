@@ -161,31 +161,37 @@ var weekDaysViewHeightRatio: CGFloat { return 0.2 }
 ///Determines the shape that is used to indicate a selected date. Defaults to a circular shape. 
 var selectionShape: JBSelectionShape { return .roundedRect }
 
-///color of any date label text that falls within the presented month
+///Font to be used in dayLabel. Defaults to systemFont of a regular size.
+var fontForDayLabel: JBFont { return JBFont(name: "Avenir", size: .medium) }
+
+///Font to be used in the bar which shows the 'mon' to 'sun' labels (weekdaysView). Defaults to systemFont of a regular size.
+var fontForWeekDaysViewText: JBFont { return JBFont(name: "Avenir", size: .medium) }
+
+///Color of any date label text that falls within the presented month
 var colorForDayLabelInMonth: UIColor { return UIColor of choice }
 
-///color of any date label text that falls out of the presented month and is part of the next or previous (but not presented) month
+///Color of any date label text that falls out of the presented month and is part of the next or previous (but not presented) month
 var colorForDayLabelOutOfMonth: UIColor { return UIColor of choice }
 
-///color of the 'today' date label text
+///Color of the 'today' date label text
 var colorForCurrentDay: UIColor { return UIColor of choice }
 
-///color of any label text that is selected
+///Color of any label text that is selected
 var colorForSelelectedDayLabel: UIColor { return UIColor of choice }
 
-///color of the bar which shows the 'mon' to 'sun' labels. Defaults to green. 
+///Color of the bar which shows the 'mon' to 'sun' labels. Defaults to green. 
 var colorForWeekDaysViewBackground: UIColor { return UIColor of choice }
 
-///color of the labels in the WeekdaysView bar that say 'mon' to 'sun'. Defaults to white.
+///Color of the labels in the WeekdaysView bar that say 'mon' to 'sun'. Defaults to white.
 var colorForWeekDaysViewText: UIColor { return UIColor of choice }
 
-///color of the selection circle for dates that aren't today
+///Color of the selection circle for dates that aren't today
 var colorForSelectionCircleForOtherDate: UIColor { return UIColor of choice }
 
-///color of the selection circle for today
+///Color of the selection circle for today
 var colorForSelectionCircleForToday: UIColor { return UIColor of choice }
 
-///color of the semi selected selection circle (that shows on a long press)
+///Color of the semi selected selection circle (that shows on a long press)
 var colorForSemiSelectedSelectionCircle: UIColor { return UIColor of choice }
 ```
 
