@@ -82,6 +82,29 @@ public protocol JBDatePickerViewDelegate: class {
      */
     var selectionShape: JBSelectionShape { get }
     
+    /**
+     font of the date labels. Defaults to systemfont with a medium size.
+     
+     - Note: you can use any UIFont name you want, as long as it is available. If it's not available, JBDatePicker will
+     use the systemfont instead. If you want to use the systemfont but customize it's size, use an empty string as the
+     fontname.
+     
+     ## Usage Example: ##
+     ````
+     //set custom font
+     var fontForDayLabel: JBFont {
+        return JBFont(name: "AvenirNext-MediumItalic", size: .medium)
+     }
+     
+     //set system font with custom size
+     var fontForDayLabel: JBFont {
+        return JBFont(name: "", size: .large)
+     }
+     
+     ````
+     */
+    var fontForDayLabel: JBFont { get }
+    
     
     // MARK: - Text Color appearance properties
     
@@ -170,6 +193,7 @@ public extension JBDatePickerViewDelegate {
     public var shouldLocalize: Bool { return false }
     public var weekDaysViewHeightRatio: CGFloat { return 0.1 }
     public var selectionShape: JBSelectionShape { return .circle }
+    public var fontForDayLabel: JBFont { return JBFont() }
     
     // MARK: - Color defaults
     

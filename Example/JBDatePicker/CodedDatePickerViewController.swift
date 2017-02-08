@@ -60,10 +60,15 @@ class CodedDatePickerViewController: UIViewController, JBDatePickerViewDelegate 
         return .wednesday
     }
     
-    //custom font
+    //custom font for weekdaysView
     var fontForWeekDaysViewText: JBFont {
 
         return JBFont(name: "AvenirNext-MediumItalic", size: .medium)
+    }
+    
+    //custom font for dayLabel
+    var fontForDayLabel: JBFont {
+        return JBFont(name: "Avenir", size: .medium)
     }
     
     //custom colors

@@ -118,11 +118,39 @@ public final class JBDatePickerDayView: UIView {
     }
     
     private func setupLabelFont() {
-     
-        //calculate size of font
-        let sizeOfFont = (min(frame.size.width, frame.size.height) / 2) - 4
         
-        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName:UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)])
+        //get preferred font
+        guard let preferredFont = datePickerView.delegate?.fontForDayLabel else { return }
+        
+        //get preferred size
+        let preferredSize = preferredFont.fontSize
+        let sizeOfFont: CGFloat
+        
+        //calculate fontsize to be used
+        switch preferredSize {
+        case .verySmall: sizeOfFont = min(frame.size.width, frame.size.height) / 3.5
+        case .small: sizeOfFont = min(frame.size.width, frame.size.height) / 3
+        case .medium: sizeOfFont = min(frame.size.width, frame.size.height) / 2.5
+        case .large: sizeOfFont = min(frame.size.width, frame.size.height) / 2
+        case .veryLarge: sizeOfFont = min(frame.size.width, frame.size.height) / 1.5
+        }
+        
+        //get font to be used
+        let fontToUse: UIFont
+        switch preferredFont.fontName.isEmpty {
+        case true:
+            fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+        case false:
+            if let customFont = UIFont(name: preferredFont.fontName, size: sizeOfFont) {
+                fontToUse = customFont
+            }
+            else {
+                print("custom font '\(preferredFont.fontName)' for dayLabel not available. JBDatePicker will use system font instead")
+                fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+            }
+        }
+        
+        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName: fontToUse])
         
     }
     
