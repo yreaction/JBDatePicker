@@ -65,7 +65,7 @@ JBDatePicker can be implemented in your project in two ways:
 
 Besides that, you need to integrate **JBDatePicker** with your project through **CocoaPods**. If you don’t know how to do this, please follow [this tutorial](https://guides.cocoapods.org/using/getting-started.html "CocoaPods Guides - Getting Started"). Alternatively you can use Carthage or drag the JBDatePicker classes into your project manually. 
 
-###Storyboard setup
+### Storyboard setup
 
 Add a UIView to your storyboard, go to the identity inspector and select JBDatePickerView as the custom class for your new view. Next, open the assistant editor and control drag to your viewController to create an outlet like this:
 
@@ -73,7 +73,17 @@ Add a UIView to your storyboard, go to the identity inspector and select JBDateP
 @IBOutlet weak var datePicker: JBDatePickerView!
 ```
 
-Next, make sure you adopt the ‘JBDatePickerViewDelegate’ protocol and set your viewController as the delegate of JBDatePicker, for example in viewDidLoad:
+Next, make sure that you import JBDatePicker and that you adopt the ‘JBDatePickerViewDelegate’ protocol:
+
+```swift
+import JBDatePicker
+
+class ViewController: UIViewController, JBDatePickerViewDelegate {
+ 
+}
+```
+
+Don't forget to set your viewController as the delegate of JBDatePicker, for example in viewDidLoad:
 
 ```swift
 override func viewDidLoad() {
@@ -95,7 +105,7 @@ func didSelectDay(_ dayView: JBDatePickerDayView) {
 
 Running the app should show JBDatePicker and tapping a date should print a statement in the console. If not, double check that you’ve set the delegate and that you called the updateLayout method. If you want to customize the looks of JBDatePicker, keep reading. 
 
-###Manual setup
+### Manual setup
 
 It is also possible to setup JBDatePicker without using Interface Builder. This is a code example: 
 
@@ -117,11 +127,11 @@ override func viewDidLoad() {
 // MARK: - JBDatePickerViewDelegate
 
 func didSelectDay(_ dayView: JBDatePickerDayView) {
-    print("date selected: \(dayView.date)")
+    print("date selected: \(String(describing: dayView.date))")
 }
 ```
 
-###Delegate functionality
+### Delegate functionality
 
 Besides the only required method, the delegate offers several optional methods and properties to implement:
 
@@ -138,7 +148,7 @@ func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {
 var dateToShow: Date { return a Date object}
 ```
 
-###Appearance customization
+### Appearance customization
 
 It is possible to customize the appearance of several parts of JBDatePicker by implementing the following optional properties:
 
