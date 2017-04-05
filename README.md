@@ -99,7 +99,7 @@ Adopting the JBDatePickerViewDelegate protocol requires the implementation of a 
 // MARK: - JBDatePickerViewDelegate implementation
 
 func didSelectDay(_ dayView: JBDatePickerDayView) {
-    print("date selected: \(dayView.date)")
+    print("date selected: \(String(describing: dayView.date))")
 }
 ```
 
