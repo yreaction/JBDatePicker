@@ -26,7 +26,15 @@ public protocol JBDatePickerViewDelegate: class {
      */
     func didPresentOtherMonth(_ monthView: JBDatePickerMonthView)
     
-    
+    /**
+     Is called to check if any particular date is selectable by the picker
+     - parameter date: the date to check if allowed
+     - note:
+     Implementing this method is optional.
+     */
+    func shouldAllowSelectionOfDay(_ date: Date?) -> Bool
+
+
     /**
      Sets the day that determines which month is shown on initial load
      - note:
@@ -114,6 +122,9 @@ public protocol JBDatePickerViewDelegate: class {
     ///color of any date label text that falls out of the presented month and is part of the next or previous (but not presented) month
     var colorForDayLabelOutOfMonth: UIColor { get }
     
+    ///color of any date label text that occurs outside the allowed selectable days (day earlier than earliest selectable or later than last selectable)
+    var colorForUnavaibleDay: UIColor { get }
+    
     ///color of the 'today' date label text
     var colorForCurrentDay: UIColor { get }
     
@@ -174,6 +185,7 @@ public protocol JBDatePickerViewDelegate: class {
 public extension JBDatePickerViewDelegate {
     
     public func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {}
+    public func shouldAllowSelectionOfDay(_ date: Date?) -> Bool { return true }
     
     
     // MARK: - General defaults
@@ -199,6 +211,7 @@ public extension JBDatePickerViewDelegate {
     
     public var colorForDayLabelInMonth: UIColor { return .darkGray }
     public var colorForDayLabelOutOfMonth: UIColor { return .lightGray }
+    public var colorForUnavaibleDay: UIColor { return .lightGray }
     public var colorForCurrentDay: UIColor { return .red }
     public var colorForSelelectedDayLabel: UIColor { return .white }
     public var colorForWeekDaysViewBackground: UIColor { return  UIColor(red: 81.0/255.0, green: 182.0/255.0, blue: 185.0/255.0, alpha: 1.0) }

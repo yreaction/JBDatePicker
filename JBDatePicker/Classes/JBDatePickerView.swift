@@ -133,6 +133,12 @@ extension JBDatePickerView {
         return dateFormatter.string(from: date)
     }
     
+    func dateIsSelectable(date: Date?) -> Bool {
+
+        //default true, pass check to delegate if exists
+        return delegate?.shouldAllowSelectionOfDay(date) ?? true
+    }
+    
     ///this will call the delegate as well as set the selectedDate on the datePicker. 
     func didTapDayView(dayView: JBDatePickerDayView) {
         selectedDateView = dayView

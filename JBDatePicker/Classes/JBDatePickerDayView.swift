@@ -71,6 +71,11 @@ public final class JBDatePickerDayView: UIView {
             }
         }
 
+        //check date is selectable, if not selectable, set colour and don't add gestures
+        guard datePickerView.dateIsSelectable(date: date) else {
+            self.textLabel.textColor = datePickerView.delegate?.colorForUnavaibleDay
+            return
+        }
         
         //highlight current day. Must come before selection of selected date, because it would override the text color set by select()
         if isToday {
