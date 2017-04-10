@@ -144,6 +144,22 @@ func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {
     print(“month selected: \(monthView.monthDescription)”)
 }
 
+/**
+Is called to check if any particular date is selectable by the picker
+- parameter date: the date to be checked on selectability 
+*/
+func shouldAllowSelectionOfDay(_ date: Date?) -> Bool {
+
+    //this code example disables selection for dates older then today
+    guard let date = date else {return true}
+    let comparison = NSCalendar.current.compare(date, to: Date().stripped()!, toGranularity: .day)
+
+    if comparison == .orderedAscending {
+        return false
+    }
+    return true
+}
+
 ///Sets the day that determines which month is shown on initial load. Defaults to the current date.
 var dateToShow: Date { return a Date object}
 ```
@@ -182,6 +198,9 @@ var colorForDayLabelInMonth: UIColor { return UIColor of choice }
 
 ///Color of any date label text that falls out of the presented month and is part of the next or previous (but not presented) month
 var colorForDayLabelOutOfMonth: UIColor { return UIColor of choice }
+
+///Color of any date label text that falls within the presented month but is unavailable because it's selection is now allowed
+var colorForUnavaibleDay: UIColor { return UIColor of choice }
 
 ///Color of the 'today' date label text
 var colorForCurrentDay: UIColor { return UIColor of choice }
