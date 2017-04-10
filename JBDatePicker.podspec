@@ -31,7 +31,7 @@ JBDatePicker is a view which shows a month with all of its days. The user can se
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'JBDatePicker/Classes/**/*.{swift}'
-  
+
   # s.resource_bundles = {
   #   'JBDatePicker' => ['JBDatePicker/Assets/*.png']
   # }
