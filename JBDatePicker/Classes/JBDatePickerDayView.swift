@@ -60,11 +60,11 @@ public final class JBDatePickerDayView: UIView {
             //set default color
             textLabel.textColor = datePickerView.delegate?.colorForDayLabelInMonth
             
-                    //check date is selectable, if not selectable, set colour and don't add gestures
-                    guard datePickerView.dateIsSelectable(date: date) else {
-                        self.textLabel.textColor = datePickerView.delegate?.colorForUnavaibleDay
-                        return
-                    }
+                //check date is selectable, if not selectable, set colour and don't add gestures
+                guard datePickerView.dateIsSelectable(date: date) else {
+                    self.textLabel.textColor = datePickerView.delegate?.colorForUnavaibleDay
+                    return
+                }
 
         }
         else{

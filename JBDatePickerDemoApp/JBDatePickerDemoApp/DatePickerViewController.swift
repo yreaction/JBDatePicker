@@ -56,15 +56,20 @@ class DatePickerViewController: UIViewController, JBDatePickerViewDelegate {
     }
     
     func shouldAllowSelectionOfDay(_ date: Date?) -> Bool {
-        if date! < Date() {
+        
+        guard let date = date else {return true}
+        let comparison = NSCalendar.current.compare(date, to: Date().stripped()!, toGranularity: .day)
+        
+        if comparison == .orderedAscending {
             return false
         }
         return true
+ 
     }
 
-    var colorForUnavaibleDay: UIColor {
-        return .red
-    }
+//    var colorForUnavaibleDay: UIColor {
+//        return .blue
+//    }
     
     var dateToShow: Date {
         
