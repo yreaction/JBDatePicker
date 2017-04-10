@@ -55,6 +55,17 @@ class DatePickerViewController: UIViewController, JBDatePickerViewDelegate {
         
     }
     
+    func shouldAllowSelectionOfDay(_ date: Date?) -> Bool {
+        if date! < Date() {
+            return false
+        }
+        return true
+    }
+
+    var colorForUnavaibleDay: UIColor {
+        return .red
+    }
+    
     var dateToShow: Date {
         
         if let date = dateToSelect {

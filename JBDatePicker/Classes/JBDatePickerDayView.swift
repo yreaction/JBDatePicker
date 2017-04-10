@@ -56,13 +56,25 @@ public final class JBDatePickerDayView: UIView {
         labelSetup()
         
         if dayInfo.isInMonth {
+            
+            //set default color
             textLabel.textColor = datePickerView.delegate?.colorForDayLabelInMonth
+            
+                    //check date is selectable, if not selectable, set colour and don't add gestures
+                    guard datePickerView.dateIsSelectable(date: date) else {
+                        self.textLabel.textColor = datePickerView.delegate?.colorForUnavaibleDay
+                        return
+                    }
+
         }
         else{
             
             if let shouldShow = datePickerView.delegate?.shouldShowMonthOutDates {
                 if shouldShow {
                     textLabel.textColor = datePickerView.delegate?.colorForDayLabelOutOfMonth
+                    
+                    //check date is selectable, if not selectable, don't add gestures
+                    guard datePickerView.dateIsSelectable(date: date) else {return}
                 }
                 else{
                     self.isUserInteractionEnabled = false
@@ -71,11 +83,6 @@ public final class JBDatePickerDayView: UIView {
             }
         }
 
-        //check date is selectable, if not selectable, set colour and don't add gestures
-        guard datePickerView.dateIsSelectable(date: date) else {
-            self.textLabel.textColor = datePickerView.delegate?.colorForUnavaibleDay
-            return
-        }
         
         //highlight current day. Must come before selection of selected date, because it would override the text color set by select()
         if isToday {
