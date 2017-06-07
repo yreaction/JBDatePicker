@@ -34,6 +34,13 @@ public protocol JBDatePickerViewDelegate: class {
      */
     func shouldAllowSelectionOfDay(_ date: Date?) -> Bool
 
+    /**
+     Is called when setting up the calendar view as an override point for customization of weekday labels
+     - parameter calendar: calendar instance used by the calendar view
+     - note:
+     Implementing this method is optional.
+     */
+    func weekdaySymbols(for calendar: Calendar) -> [String]
 
     /**
      Sets the day that determines which month is shown on initial load
@@ -186,7 +193,7 @@ public extension JBDatePickerViewDelegate {
     
     public func didPresentOtherMonth(_ monthView: JBDatePickerMonthView) {}
     public func shouldAllowSelectionOfDay(_ date: Date?) -> Bool { return true }
-    
+    public func weekdaySymbols(for calendar: Calendar) -> [String] { return calendar.shortStandaloneWeekdaySymbols }
     
     // MARK: - General defaults
     

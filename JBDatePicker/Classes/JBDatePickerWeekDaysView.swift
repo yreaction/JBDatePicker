@@ -58,7 +58,7 @@ public final class JBDatePickerWeekDaysView: UIStackView {
                 cal.locale = Locale(identifier: preferredLanguage)
             }
         }
-        weekdayNameSymbols = cal.shortWeekdaySymbols
+        weekdayNameSymbols = datePickerView.delegate?.weekdaySymbols(for: cal) ?? cal.shortStandaloneWeekdaySymbols
         
         //adjust order of weekDayNameSymbols if needed
         let firstWeekdayIndex = firstWeekDay.rawValue - 1
