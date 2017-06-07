@@ -172,12 +172,6 @@ It is possible to customize the appearance of several parts of JBDatePicker by i
 ///Sets the first day of the week. Defaults to the local preference.
 var firstWeekDay: JBWeekDay { return .wednesday }
 
-/**
-Customizes the weekday symbols. Defaults to 'shortStandaloneWeekdaySymbols', but any Calendar API value can be used. It is also possible to return a custom string array. 
-- parameter calendar: calendar instance used by the calendar view
-*/
-func weekdaySymbols(for calendar: Calendar) -> [String]
-
 ///Determines if a month should also show the dates of the previous and next month. Defaults to true.
 var shouldShowMonthOutDates: Bool { return false }
 
@@ -189,6 +183,12 @@ var shouldLocalize: Bool { return true }
 
 ///Determines the height ratio of the weekDaysView compared to the total height. Defaults to 0.1 (10%).
 var weekDaysViewHeightRatio: CGFloat { return 0.2 }
+
+/**
+Customizes the weekday symbols. Defaults to 'shortStandaloneWeekdaySymbols', but any Calendar API value can be used. It is also possible to return a custom string array. 
+- parameter calendar: calendar instance used by the calendar view
+*/
+func weekdaySymbols(for calendar: Calendar) -> [String]
 
 ///Determines the shape that is used to indicate a selected date. Defaults to a circular shape. 
 var selectionShape: JBSelectionShape { return .roundedRect }
