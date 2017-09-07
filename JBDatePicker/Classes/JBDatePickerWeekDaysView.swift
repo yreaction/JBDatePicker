@@ -105,7 +105,7 @@ public final class JBDatePickerWeekDaysView: UIStackView {
         
         //get preferred size
         let preferredSize = preferredFont.fontSize
-        let sizeOfFont: CGFloat
+        var sizeOfFont: CGFloat
         
         //calculate fontsize to be used
         switch preferredSize {
@@ -114,7 +114,17 @@ public final class JBDatePickerWeekDaysView: UIStackView {
             case .medium: sizeOfFont = min(frame.size.width, frame.size.height) / 3
             case .large: sizeOfFont = min(frame.size.width, frame.size.height) / 2
             case .veryLarge: sizeOfFont = min(frame.size.width, frame.size.height) / 1.5
+            case .custom:
+            
+            if let customSize = self.datePickerView.delegate?.fontSizeForDayLabel {
+                sizeOfFont = customSize
+            }
+            else {
+                sizeOfFont = min(frame.size.width, frame.size.height) / 1.5
+            }
+            
         }
+    
 
         //get font to be used
         let fontToUse: UIFont

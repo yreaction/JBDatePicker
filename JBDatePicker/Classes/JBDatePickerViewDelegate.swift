@@ -119,6 +119,7 @@ public protocol JBDatePickerViewDelegate: class {
      ````
      */
     var fontForDayLabel: JBFont { get }
+    var fontSizeForDayLabel: CGFloat { get }
     
     
     // MARK: - Text Color appearance properties
@@ -213,6 +214,7 @@ public extension JBDatePickerViewDelegate {
     public var weekDaysViewHeightRatio: CGFloat { return 0.1 }
     public var selectionShape: JBSelectionShape { return .circle }
     public var fontForDayLabel: JBFont { return JBFont() }
+    public var fontSizeForDayLabel: CGFloat { return 15.0 }
     
     // MARK: - Color defaults
     
