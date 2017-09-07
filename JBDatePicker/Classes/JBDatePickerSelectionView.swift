@@ -12,13 +12,12 @@ class JBDatePickerSelectionView: UIView {
     
     // MARK: - Computed properties
     
-    private let padding: CGFloat = 0
+    private let padding: CGFloat = 10
     
     private var radius: CGFloat {
         
         return (min(frame.height, frame.width) - padding) / 2
     }
-    
     
     private var circlePath: CGPath {
         let arcCenter = CGPoint(x: frame.width / 2, y: frame.height / 2)
@@ -36,8 +35,18 @@ class JBDatePickerSelectionView: UIView {
         
         let pathSize = radius * 2
         let center = CGPoint(x: frame.width / 2, y: frame.height / 2)
-        let startPoint = CGPoint(x: center.x - radius - 2.0, y: center.y - radius)
-        let path = UIBezierPath(rect: CGRect(x: startPoint.x, y: startPoint.y, width: pathSize + 2.0, height: pathSize))
+        let startPoint = CGPoint(x: center.x - radius, y: center.y - radius)
+        let path = UIBezierPath(rect: CGRect(x: startPoint.x, y: startPoint.y, width: pathSize, height: pathSize))
+        
+        return path.cgPath
+    }
+    
+    private var rectanglePath: CGPath {
+        
+        let pathSize = radius * 2
+        let center = CGPoint(x: frame.width / 2, y: frame.height / 2)
+        let startPoint = CGPoint(x: center.x - radius - 8.0, y: center.y - radius - 4.0)
+        let path = UIBezierPath(rect: CGRect(x: startPoint.x, y: startPoint.y, width: pathSize + 16.0, height: pathSize + 8.0))
         
         return path.cgPath
     }
@@ -77,6 +86,8 @@ class JBDatePickerSelectionView: UIView {
             return circlePath
         case .square:
             return squarePath
+        case .rectangle:
+            return rectanglePath
         case .roundedRect:
             return roundedRectPath
         }
