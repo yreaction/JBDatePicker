@@ -36,8 +36,8 @@ class JBDatePickerSelectionView: UIView {
         
         let pathSize = radius * 2
         let center = CGPoint(x: frame.width / 2, y: frame.height / 2)
-        let startPoint = CGPoint(x: center.x - radius, y: center.y - radius)
-        let path = UIBezierPath(rect: CGRect(x: startPoint.x, y: startPoint.y, width: pathSize, height: pathSize))
+        let startPoint = CGPoint(x: center.x - radius - 2.0, y: center.y - radius)
+        let path = UIBezierPath(rect: CGRect(x: startPoint.x, y: startPoint.y, width: pathSize + 2.0, height: pathSize))
         
         return path.cgPath
     }
