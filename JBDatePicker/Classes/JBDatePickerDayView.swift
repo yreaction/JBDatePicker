@@ -145,6 +145,15 @@ public final class JBDatePickerDayView: UIView {
         case .medium: sizeOfFont = min(frame.size.width, frame.size.height) / 2.5
         case .large: sizeOfFont = min(frame.size.width, frame.size.height) / 2
         case .veryLarge: sizeOfFont = min(frame.size.width, frame.size.height) / 1.5
+        case .custom:
+        
+            if let customSize = self.datePickerView.delegate?.fontSizeForDayLabel {
+                sizeOfFont = customSize
+            }
+            else {
+                sizeOfFont = min(frame.size.width, frame.size.height) / 1.5
+            }
+            
         }
         
         //get font to be used
