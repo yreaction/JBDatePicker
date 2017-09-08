@@ -45,7 +45,9 @@ final class JBDatePickerManager {
     func getMonthInfoForDate(_ date: Date) -> (monthStartDay: Date, monthEndDay: Date, numberOfWeeksInMonth: Int, weekDayInfo: [[Int:JBDay]], weekOfYear: Int) {
         
         var components = calendar.dateComponents([.year, .month, .weekOfMonth, .weekOfYear], from: date)
-        
+
+        let weekOfYear = components.weekOfYear!
+
         //first day of the month
         components.day = 1
         let monthValue = components.month!
@@ -203,7 +205,7 @@ final class JBDatePickerManager {
             
         }
 
-        return (monthStartDay, monthEndDay, numberOfWeeksInMonth, weeksInMonthInformationToReturn, components.weekOfYear!)
+        return (monthStartDay, monthEndDay, numberOfWeeksInMonth, weeksInMonthInformationToReturn, weekOfYear)
         
     }
     
