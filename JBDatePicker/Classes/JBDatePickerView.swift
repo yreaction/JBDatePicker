@@ -133,13 +133,6 @@ extension JBDatePickerView {
         return dateFormatter.string(from: date)
     }
     
-    func monthWeeksOfYear(_ date: Date) -> [Int] {
-        
-        
-        
-        return dateFormatter.string(from: date)
-    }
-    
     func dateIsSelectable(date: Date?) -> Bool {
 
         //default true, pass check to delegate if exists
