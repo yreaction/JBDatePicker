@@ -52,7 +52,7 @@ public final class JBDatePickerMonthView: UIStackView {
         self.monthDescription = datePickerView.monthDescriptionForDate(self.date)
         
         let firstWeekOfYear = monthInfo.weekOfYear
-        for w in firstWeekOfYear...(firstWeekOfYear+numberOfWeeks) {
+        for w in firstWeekOfYear...(firstWeekOfYear+(numberOfWeeks-1)) {
             self.monthWeeksOfYear.append(w)
         }
         
