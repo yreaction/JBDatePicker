@@ -17,8 +17,6 @@ final class JBDatePickerManager {
     private var currentDate: Date = Date()
     private var startdayOfWeek: Int
 
-    
-    
     // MARK: - Initialization
     
     init(datePickerView: JBDatePickerView) {
@@ -44,9 +42,9 @@ final class JBDatePickerManager {
      The JBDay object holds the value (like 17) and a bool that determines that the day involved
      is included in the month or not.
      */
-    func getMonthInfoForDate(_ date: Date) -> (monthStartDay: Date, monthEndDay: Date, numberOfWeeksInMonth: Int, weekDayInfo: [[Int:JBDay]]) {
+    func getMonthInfoForDate(_ date: Date) -> (monthStartDay: Date, monthEndDay: Date, numberOfWeeksInMonth: Int, weekDayInfo: [[Int:JBDay]], weekOfYear: Int) {
         
-        var components = calendar.dateComponents([.year, .month, .weekOfMonth], from: date)
+        var components = calendar.dateComponents([.year, .month, .weekOfMonth, .weekOfYear], from: date)
         
         //first day of the month
         components.day = 1
@@ -205,7 +203,7 @@ final class JBDatePickerManager {
             
         }
 
-        return (monthStartDay, monthEndDay, numberOfWeeksInMonth, weeksInMonthInformationToReturn)
+        return (monthStartDay, monthEndDay, numberOfWeeksInMonth, weeksInMonthInformationToReturn, components.weekOfYear!)
         
     }
     

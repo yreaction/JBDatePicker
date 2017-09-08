@@ -121,7 +121,7 @@ extension JBDatePickerView {
 extension JBDatePickerView {
     
     func monthDescriptionForDate(_ date: Date) -> String {
-
+        
         let monthFormatString = "MMMM yyyy"
         dateFormatter.dateFormat = monthFormatString
         if let preferredLanguage = Bundle.main.preferredLocalizations.first {
@@ -129,7 +129,14 @@ extension JBDatePickerView {
                 dateFormatter.locale = Locale(identifier: preferredLanguage)
             }
         }
-
+        
+        return dateFormatter.string(from: date)
+    }
+    
+    func monthWeeksOfYear(_ date: Date) -> [Int] {
+        
+        
+        
         return dateFormatter.string(from: date)
     }
     
