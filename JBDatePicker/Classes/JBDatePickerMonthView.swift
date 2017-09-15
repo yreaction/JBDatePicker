@@ -51,9 +51,14 @@ public final class JBDatePickerMonthView: UIStackView {
         self.numberOfWeeks = monthInfo.numberOfWeeksInMonth
         self.monthDescription = datePickerView.monthDescriptionForDate(self.date)
         
-        let firstWeekOfYear = monthInfo.weekOfYear
+        /*let firstWeekOfYear = monthInfo.weekOfYear
         for w in firstWeekOfYear...(firstWeekOfYear+(numberOfWeeks-1)) {
             self.monthWeeksOfYear.append(w)
+        }*/
+        
+        let weekRange = NSCalendar.current.range(of: .weekOfYear, in: .month, for: date)
+        if let range = weekRange {
+            self.monthWeeksOfYear = Array(range.lowerBound...range.upperBound)
         }
         
         //this is needed to inform the delegate about the presented month
