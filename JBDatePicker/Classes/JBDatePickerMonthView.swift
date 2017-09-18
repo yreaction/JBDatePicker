@@ -28,7 +28,7 @@ public final class JBDatePickerMonthView: UIStackView {
     public var monthDescription: String!
     public var monthWeeksOfYear: [Int] = []
 
-    var monthInfo: (monthStartDay: Date, monthEndDay: Date, numberOfWeeksInMonth: Int, weekDayInfo: [[Int:JBDay]], weekOfYear : Int)!
+    var monthInfo: (monthStartDay: Date, monthEndDay: Date, numberOfWeeksInMonth: Int, weekDayInfo: [[Int:JBDay]], weeksOfYear : [Int])!
     var numberOfWeeks: Int!
     var weekViews: [JBDatePickerWeekView]!
     
@@ -51,19 +51,7 @@ public final class JBDatePickerMonthView: UIStackView {
         self.numberOfWeeks = monthInfo.numberOfWeeksInMonth
         self.monthDescription = datePickerView.monthDescriptionForDate(self.date)
         
-        
-        
-         let firstWeekOfYear = monthInfo.weekOfYear
-        for w in firstWeekOfYear...(firstWeekOfYear+(numberOfWeeks-1)) {
-            self.monthWeeksOfYear.append(w)
-        }
-        
-        let weekRange = NSCalendar.current.range(of: .weekOfYear, in: .month, for: date)
-        if let range = weekRange {
-            self.monthWeeksOfYear = Array(range.lowerBound...range.upperBound)
-        }
-        
-        
+        self.monthWeeksOfYear = monthInfo.weeksOfYear
         
         //this is needed to inform the delegate about the presented month
         //the property observer isn't called on initialization 
