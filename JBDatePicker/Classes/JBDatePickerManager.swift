@@ -151,14 +151,14 @@ final class JBDatePickerManager {
                     dayOfWeekIndex += 1
                     dayOfMonthIndex += 1
                     
-                    if let myDate = dayInWeek.date {
-                        let calendar = Calendar.current
-                        var comps = calendar.dateComponents([.weekOfYear], from: myDate)
-                        if let w = comps.weekOfYear {
-                            weeks.append(w)
-                        }
+                }
+                
+                if let jbday = weekInformationToReturn[0], let myDate = jbday.date {
+                    let calendar = Calendar.current
+                    var comps = calendar.dateComponents([.weekOfYear], from: myDate)
+                    if let w = comps.weekOfYear {
+                        weeks.append(w)
                     }
-                    
                 }
                 
                 weeksInMonthInformationToReturn.append(weekInformationToReturn)
@@ -185,14 +185,16 @@ final class JBDatePickerManager {
                     dayOfMonthIndex += 1
                     
                     
-                    if let myDate = dayInWeek.date {
-                        let calendar = Calendar.current
-                        var comps = calendar.dateComponents([.weekOfYear], from: myDate)
-                        if let w = comps.weekOfYear {
-                            weeks.append(w)
-                        }
-                    }
+                
 
+                }
+                
+                if let jbday = weekInformationToReturn[0], let myDate = jbday.date {
+                    let calendar = Calendar.current
+                    var comps = calendar.dateComponents([.weekOfYear], from: myDate)
+                    if let w = comps.weekOfYear {
+                        weeks.append(w)
+                    }
                 }
                 
                 //get the first days of the next month
@@ -219,15 +221,14 @@ final class JBDatePickerManager {
                     dayOfWeekIndex += 1
                     dayOfMonthIndex += 1
                     
-                    
-                    if let myDate = dayInWeek.date {
-                        let calendar = Calendar.current
-                        var comps = calendar.dateComponents([.weekOfYear], from: myDate)
-                        if let w = comps.weekOfYear {
-                            weeks.append(w)
-                        }
+                }
+                
+                if let jbday = weekInformationToReturn[0], let myDate = jbday.date {
+                    let calendar = Calendar.current
+                    var comps = calendar.dateComponents([.weekOfYear], from: myDate)
+                    if let w = comps.weekOfYear {
+                        weeks.append(w)
                     }
-                    
                 }
                 
                 weeksInMonthInformationToReturn.append(weekInformationToReturn)
