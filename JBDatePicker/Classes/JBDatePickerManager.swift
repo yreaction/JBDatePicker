@@ -235,7 +235,7 @@ final class JBDatePickerManager {
             
         }
 
-        return (monthStartDay, monthEndDay, numberOfWeeksInMonth, weeksInMonthInformationToReturn, weeksOfYear)
+        return (monthStartDay, monthEndDay, numberOfWeeksInMonth, weeksInMonthInformationToReturn, weeks)
         
     }
     
