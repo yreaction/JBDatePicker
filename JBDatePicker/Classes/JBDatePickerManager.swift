@@ -117,6 +117,8 @@ final class JBDatePickerManager {
         
         //this value holds 0 to the number of days in a month
         var dayOfMonthIndex: Int = 0
+        
+        var weeks : [Int] = []
 
         for weekIndex in 0..<numberOfWeeksInMonth {
             
@@ -148,6 +150,15 @@ final class JBDatePickerManager {
                     weekInformationToReturn[dayOfWeekIndex] = dayInWeek
                     dayOfWeekIndex += 1
                     dayOfMonthIndex += 1
+                    
+                    if let myDate = dayInWeek.date {
+                        let calendar = Calendar.current
+                        var comps = calendar.dateComponents([.weekOfYear], from: myDate)
+                        if let w = comps.weekOfYear {
+                            weeks.append(w)
+                        }
+                    }
+                    
                 }
                 
                 weeksInMonthInformationToReturn.append(weekInformationToReturn)
@@ -156,11 +167,11 @@ final class JBDatePickerManager {
                 
                 var weekInformationToReturn = [Int:JBDay]()
                 
-                //get the last days of the month
+                // get the last days of the month
                 let amountOfLastDays = 7 - (6 - lastDayIndexInWeekView)
                 guard dayOfMonthIndex < monthDatesArray.count else {
                     
-                    //remove unnecessary week line
+                    // remove unnecessary week line
                     numberOfWeeksInMonth -= 1
                     continue
                 }
@@ -172,6 +183,16 @@ final class JBDatePickerManager {
                     weekInformationToReturn[dayOfWeekIndex] = dayInWeek
                     dayOfWeekIndex += 1
                     dayOfMonthIndex += 1
+                    
+                    
+                    if let myDate = dayInWeek.date {
+                        let calendar = Calendar.current
+                        var comps = calendar.dateComponents([.weekOfYear], from: myDate)
+                        if let w = comps.weekOfYear {
+                            weeks.append(w)
+                        }
+                    }
+
                 }
                 
                 //get the first days of the next month
@@ -179,6 +200,7 @@ final class JBDatePickerManager {
                     let dayInNextMontValue = nextMonthDatesArray[i]
                     let dayInNextMonth = JBDay(dayValue: dayInNextMontValue, monthValue: nextMonthValue, yearValue: nextYearValue, isInMonth: false)
                     weekInformationToReturn[dayOfWeekIndex + i] = dayInNextMonth
+                    
                 }
                 
                 weeksInMonthInformationToReturn.append(weekInformationToReturn)
@@ -196,6 +218,15 @@ final class JBDatePickerManager {
                     weekInformationToReturn[dayOfWeekIndex] = dayInWeek
                     dayOfWeekIndex += 1
                     dayOfMonthIndex += 1
+                    
+                    
+                    if let myDate = dayInWeek.date {
+                        let calendar = Calendar.current
+                        var comps = calendar.dateComponents([.weekOfYear], from: myDate)
+                        if let w = comps.weekOfYear {
+                            weeks.append(w)
+                        }
+                    }
                     
                 }
                 
