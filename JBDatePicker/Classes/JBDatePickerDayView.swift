@@ -133,7 +133,8 @@ public final class JBDatePickerDayView: UIView {
         
         //get preferred font
         guard let preferredFont = datePickerView.delegate?.fontForDayLabel else { return }
-        
+        guard let preferredFontForCurrentDay = datePickerView.delegate?.fontForCurrentDayLabel else { return }
+
         //get preferred size
         let preferredSize = preferredFont.fontSize
         let sizeOfFont: CGFloat
@@ -158,17 +159,38 @@ public final class JBDatePickerDayView: UIView {
         
         //get font to be used
         let fontToUse: UIFont
-        switch preferredFont.fontName.isEmpty {
-        case true:
-            fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
-        case false:
-            if let customFont = UIFont(name: preferredFont.fontName, size: sizeOfFont) {
-                fontToUse = customFont
-            }
-            else {
-                print("custom font '\(preferredFont.fontName)' for dayLabel not available. JBDatePicker will use system font instead")
+        
+        if isToday {
+
+            switch preferredFontForCurrentDay.fontName.isEmpty {
+            case true:
                 fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+            case false:
+                if let customFont = UIFont(name: preferredFontForCurrentDay.fontName, size: sizeOfFont) {
+                    fontToUse = customFont
+                }
+                else {
+                    print("custom font '\(preferredFontForCurrentDay.fontName)' for dayLabel not available. JBDatePicker will use system font instead")
+                    fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                }
             }
+            
+        }
+        else {
+            
+            switch preferredFont.fontName.isEmpty {
+            case true:
+                fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+            case false:
+                if let customFont = UIFont(name: preferredFont.fontName, size: sizeOfFont) {
+                    fontToUse = customFont
+                }
+                else {
+                    print("custom font '\(preferredFont.fontName)' for dayLabel not available. JBDatePicker will use system font instead")
+                    fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                }
+            }
+            
         }
         
         textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName: fontToUse])
