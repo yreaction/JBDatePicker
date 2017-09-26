@@ -130,14 +130,14 @@ public final class JBDatePickerWeekDaysView: UIStackView {
         let fontToUse: UIFont
         switch preferredFont.fontName.isEmpty {
         case true:
-            fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+            fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFont.Weight.regular)
         case false:
             if let customFont = UIFont(name: preferredFont.fontName, size: sizeOfFont) {
                 fontToUse = customFont
             }
             else {
                  print("custom font '\(preferredFont.fontName)' for weekdaysView not available. JBDatePicker will use system font instead")
-                 fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                 fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFont.Weight.regular)
             }
         }
 
@@ -145,7 +145,7 @@ public final class JBDatePickerWeekDaysView: UIStackView {
         for (index, label) in weekdayLabels.enumerated() {
             
             let labelText = weekdayNameSymbols[index]
-            label.attributedText =  NSMutableAttributedString(string: labelText, attributes:[NSFontAttributeName:fontToUse])
+            label.attributedText =  NSMutableAttributedString(string: labelText, attributes:[NSAttributedStringKey.font:fontToUse])
         }
     }
     

@@ -164,14 +164,14 @@ public final class JBDatePickerDayView: UIView {
 
             switch preferredFontForCurrentDay.fontName.isEmpty {
             case true:
-                fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFont.Weight.regular)
             case false:
                 if let customFont = UIFont(name: preferredFontForCurrentDay.fontName, size: sizeOfFont) {
                     fontToUse = customFont
                 }
                 else {
                     print("custom font '\(preferredFontForCurrentDay.fontName)' for dayLabel not available. JBDatePicker will use system font instead")
-                    fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                    fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFont.Weight.regular)
                 }
             }
             
@@ -180,20 +180,20 @@ public final class JBDatePickerDayView: UIView {
             
             switch preferredFont.fontName.isEmpty {
             case true:
-                fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFont.Weight.regular)
             case false:
                 if let customFont = UIFont(name: preferredFont.fontName, size: sizeOfFont) {
                     fontToUse = customFont
                 }
                 else {
                     print("custom font '\(preferredFont.fontName)' for dayLabel not available. JBDatePicker will use system font instead")
-                    fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFontWeightRegular)
+                    fontToUse = UIFont.systemFont(ofSize: sizeOfFont, weight: UIFont.Weight.regular)
                 }
             }
             
         }
         
-        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSFontAttributeName: fontToUse])
+        textLabel.attributedText = NSMutableAttributedString(string: String(dayInfo.dayValue), attributes:[NSAttributedStringKey.font: fontToUse])
         
     }
     
@@ -206,11 +206,11 @@ public final class JBDatePickerDayView: UIView {
     
     // MARK: - Touch handling
     
-    public func dayViewTapped() {
+    @objc public func dayViewTapped() {
         datePickerView.didTapDayView(dayView: self)
     }
     
-    public func dayViewPressed(_ gesture: UILongPressGestureRecognizer) {
+    @objc public func dayViewPressed(_ gesture: UILongPressGestureRecognizer) {
         
         //if selectedDateView exists and is self, return. Long pressing shouldn't do anything on selected day. 
         if let selectedDate = datePickerView.selectedDateView {
