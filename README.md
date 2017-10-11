@@ -22,7 +22,7 @@ Overview
 
 Description
 ==========
-JBDatePicker is a subclass of UIView, written in Swift 3, that shows a calendarmonth in which the user can select a date. It allows the user to swipe between months, and to preselect a specific date. It's appearance is largely customizable. See [usage](https://github.com/Tuslareb/JBDatePicker#usage) for more information.
+JBDatePicker is a subclass of UIView, written in Swift 4, that shows a calendarmonth in which the user can select a date. It allows the user to swipe between months, and to preselect a specific date. It's appearance is largely customizable. See [usage](https://github.com/Tuslareb/JBDatePicker#usage) for more information.
 
 Screenshots
 ==========
@@ -40,7 +40,7 @@ Requirements
 ==========
 * ARC
 * iOS9
-* Swift 3
+* Swift 4
 
 Installation
 ==========
