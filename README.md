@@ -117,10 +117,22 @@ var datePicker: JBDatePickerView!
 override func viewDidLoad() {
     super.viewDidLoad()
 
-    let frameForDatePicker = CGRect(x: 0, y: 20, width: view.bounds.width, height: 250)
-    datePicker = JBDatePickerView(frame: frameForDatePicker)
+    datePicker = JBDatePickerView()
     view.addSubview(datePicker)
-    datePicker.delegate = self  
+    datePicker.delegate = self
+    
+    //add constraints
+    datePicker.translatesAutoresizingMaskIntoConstraints = false
+    datePicker.heightAnchor.constraint(equalToConstant: 250).isActive = true
+    datePicker.widthAnchor.constraint(equalToConstant: view.bounds.width).isActive = true
+    if #available(iOS 11.0, *) {
+    datePicker.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+    datePicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+    } else {
+    datePicker.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+    let topguideBottom = self.topLayoutGuide.bottomAnchor
+    datePicker.topAnchor.constraint(equalTo: topguideBottom).isActive = true
+    }
 }
 
 
